@@ -1,3 +1,10 @@
+# Managed by Ersilia Version Control (eosvc) — synced to s3://eosvc-models-public/eos21dr/
+model/checkpoints/*
+model/framework/fit/*
+# but keep the empty-dir markers so the structure exists after a clean clone
+!model/checkpoints/.gitkeep
+!model/framework/fit/.gitkeep
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
