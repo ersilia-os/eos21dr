@@ -1,0 +1,4 @@
+consensus_score,individual_inhibition,merged_mic_decoys,general_mic,general_activity_decoys,general_mic50
+0.8757,0.9169,0.6306,0.9091,0.7042,0.4458
+0.9315,0.9407,0.7362,0.9776,0.7439,0.6044
+0.874,0.9406,0.6494,0.8648,0.6184,0.5072

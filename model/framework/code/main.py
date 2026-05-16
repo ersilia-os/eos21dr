@@ -1,37 +1,67 @@
-# imports
 import os
-import csv
 import sys
-import numpy as np
-from rdkit import Chem
-from rdkit.Chem.Descriptors import MolWt
-from ersilia_pack_utils.core import read_smiles, write_out
 
-# parse arguments
-input_file = sys.argv[1]
+import numpy as np
+import pandas as pd
+
+root        = os.path.dirname(os.path.abspath(__file__))
+checkpoints = os.path.abspath(os.path.join(root, "..", "..", "checkpoints"))
+input_file  = sys.argv[1]
 output_file = sys.argv[2]
 
-# current file directory
-root = os.path.dirname(os.path.abspath(__file__))
+# LazyQSAR locates featurizer weights via $HOME/.lazyqsar/ — point it at our bundled copy.
+os.environ["HOME"] = os.path.join(checkpoints, "featurizer_weights_home")
 
-# my model
-def my_model(smiles_list):
-    return [MolWt(Chem.MolFromSmiles(smi)) for smi in smiles_list]
+from lazyqsar.api.classifier_predict import predict as lqsar_predict
 
+MODEL_NAMES = [
+    "individual_inhibition",
+    "merged_mic_decoys",
+    "general_mic",
+    "general_activity_decoys",
+    "general_mic50",
+]
+model_dir_dict = {m: os.path.join(checkpoints, "models", m) for m in MODEL_NAMES}
 
-# read SMILES from .csv file, assuming one column with header
-_, smiles_list = read_smiles(input_file)
+# One call: descriptors are shared across all 5 sub-models.
+tmp_out = output_file + ".tmp"
+lqsar_predict(
+    model_dir=model_dir_dict,
+    input_csv=input_file,
+    output_csv=tmp_out,
+    predict_type="rank",
+)
+ranks_df = pd.read_csv(tmp_out)
+os.remove(tmp_out)
 
-# run model
-outputs = my_model(smiles_list)
+# Consensus (mirrors chembl-antimicrobial-models/scripts/14_consensus_scoring.py).
+reports = pd.read_csv(os.path.join(checkpoints, "reports.csv")).set_index("model_name")
+W_COLS = ["w1", "w2", "w3", "w4", "w5", "w6", "w7"]
+W_ALL_WEIGHTS = np.ones(len(W_COLS) + 1)
 
-#check input and output have the same lenght
-input_len = len(smiles_list)
-output_len = len(outputs)
-assert input_len == output_len
+prob_ranks = ranks_df[MODEL_NAMES].fillna(0.0).values
+w_quality  = np.array([reports.loc[m, W_COLS].values for m in MODEL_NAMES], dtype=float)
+cutoffs    = np.array([reports.loc[m, "decision_cutoff_rank"] for m in MODEL_NAMES], dtype=float)
 
-num_dims = outputs.shape[1]
-header = [f"feat_{str(i).zfill(3)}" for i in range(num_dims)]
+# w8: per-compound weight — 0 at/below decision cutoff, linear 0->1 above it.
+c  = np.clip(cutoffs[np.newaxis, :], 0.0, 1.0 - 1e-9)
+w8 = np.where(prob_ranks <= c, 0.0, (prob_ranks - c) / (1.0 - c))
 
-# write output in a .csv file
-write_out(outputs, header, output_file, np.float32)
+n, M = prob_ranks.shape
+w_all = np.empty((n, M, len(W_ALL_WEIGHTS)))
+w_all[:, :, :len(W_COLS)] = w_quality
+w_all[:, :,  len(W_COLS)] = w8
+w_eff = np.average(w_all, axis=-1, weights=W_ALL_WEIGHTS)
+
+consensus_raw = (prob_ranks * w_eff).sum(axis=1) / w_eff.sum(axis=1)
+
+# Tanh IQR-restoring transform — k depends only on number of sub-models.
+_TANH_A, _TANH_TAU = 1.156, 6.47
+k = 2.0 * (1.0 + _TANH_A * (1.0 - np.exp(-M / _TANH_TAU)))
+consensus = 0.5 + 0.5 * np.tanh(k * (consensus_raw - 0.5)) / np.tanh(k / 2)
+
+out = pd.DataFrame({
+    "consensus_score": consensus.round(4),
+    **{m: ranks_df[m].round(4).values for m in MODEL_NAMES},
+})
+out.to_csv(output_file, index=False)
