@@ -1,6 +1,6 @@
 Identifier: eos21dr
 Slug: antimicrobial-activity-abaumannii
-Status: In progress
+Status: In Progress
 Title: Antimicrobial activity prediction against Acinetobacter baumannii from public ChEMBL data
 Description: >
   Bioactivity prediction of growth inhibition in Acinetobacter baumannii, trained
@@ -11,7 +11,7 @@ Description: >
 Deployment:
   - Local
   - Online
-Source: Local, Online
+Source: Local
 Source Type: Internal
 Task: Annotation
 Subtask: Activity prediction
@@ -34,7 +34,6 @@ Target Organism:
   - Acinetobacter baumannii
 Publication Type: Other
 Publication Year: 2026
-Publication: None
 Source Code: https://github.com/ersilia-os/chembl-antimicrobial-models
 License: GPL-3.0-or-later
 Contributor: arnaucoma24
