@@ -1,3 +1,10 @@
+# Managed by Ersilia Version Control (eosvc) — synced to s3://eosvc-models-public/eos21dr/
+# Note: model/checkpoints/ is NOT gitignored — it's tracked via Git LFS so CI can
+# clone it without going through eosvc. eosvc is still used by the Hub at install time.
+model/framework/fit/*
+# but keep the empty-dir markers so the structure exists after a clean clone
+!model/framework/fit/.gitkeep
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
