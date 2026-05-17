@@ -2,8 +2,7 @@
 
 Bioactivity prediction of growth inhibition in Acinetobacter baumannii, trained as binary (active/inactive) classifiers from publicly available data in ChEMBL. Independent models are trained on multiple bioactivity datasets, corresponding to single point (e.g. percent effect) and dose-response (MIC) assays. A ranking score is provided for each model alongside a combined consensus score.
 
-This model was incorporated on 2026-05-15.
-
+This model was incorporated on 2026-05-15.Last packaged on 2026-05-17.
 
 ## Information
 ### Identifiers
@@ -40,12 +39,19 @@ Below are the **Output Columns** of the model:
 ### Source and Deployment
 - **Source:** `Local`
 - **Source Type:** `Internal`
+- **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos21dr](https://hub.docker.com/r/ersiliaos/eos21dr)
+- **Docker Architecture:** `AMD64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos21dr.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos21dr.zip)
 
 ### Resource Consumption
 - **Model Size (Mb):** `667`
 - **Environment Size (Mb):** `7254`
+- **Image Size (Mb):** `9019.41`
 
+**Computational Performance (seconds):**
+- 10 inputs: `41.13`
+- 100 inputs: `41.92`
+- 10000 inputs: `831.76`
 
 ### References
 - **Source Code**: [https://github.com/ersilia-os/chembl-antimicrobial-models](https://github.com/ersilia-os/chembl-antimicrobial-models)
