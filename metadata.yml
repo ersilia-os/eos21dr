@@ -41,3 +41,6 @@ Source Code: https://github.com/ersilia-os/chembl-antimicrobial-models
 License: GPL-3.0-or-later
 Contributor: arnaucoma24
 Incorporation Date: '2026-05-15'
+S3: https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos21dr.zip
+Model Size: 667.0
+Environment Size: 7254.0
