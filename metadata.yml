@@ -1,6 +1,6 @@
 Identifier: eos21dr
 Slug: antimicrobial-activity-abaumannii
-Status: In progress
+Status: Ready
 Title: Antimicrobial activity prediction against Acinetobacter baumannii from 
   public ChEMBL data
 Description: Bioactivity prediction of growth inhibition in Acinetobacter 
@@ -41,6 +41,16 @@ Source Code: https://github.com/ersilia-os/chembl-antimicrobial-models
 License: GPL-3.0-or-later
 Contributor: arnaucoma24
 Incorporation Date: '2026-05-15'
+Last Packaging Date: '2026-05-17'
+Release: v1.0.0
 S3: https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos21dr.zip
+DockerHub: https://hub.docker.com/r/ersiliaos/eos21dr
+Docker Architecture: AMD64
 Model Size: 667.0
 Environment Size: 7254.0
+Image Size: 9019.41
+Computational Performance 1: 41.13
+Computational Performance 2: 36.3
+Computational Performance 3: 41.92
+Computational Performance 4: 179.21
+Computational Performance 5: 831.76
