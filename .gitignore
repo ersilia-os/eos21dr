@@ -5,6 +5,11 @@ model/framework/fit/*
 # but keep the empty-dir markers so the structure exists after a clean clone
 !model/framework/fit/.gitkeep
 
+# Descriptor weights are downloaded at install time by `lazyqsar setup --descriptors`
+# (see install.yml). Don't accidentally commit the downloaded artifacts.
+model/checkpoints/featurizer_weights_home/*
+!model/checkpoints/featurizer_weights_home/.gitkeep
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
