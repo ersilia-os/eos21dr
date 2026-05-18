@@ -1,6 +1,6 @@
 name,type,direction,description
 consensus_score,float,high,Tanh-transformed quality-weighted consensus probability across the 5 sub-models. Recommended threshold: 0.864.
-individual_inhibition,float,high,Probability from sub-model trained on ChEMBL assay CHEMBL4296188 (inhibition %, cutoff 25%; n=21494). Recommended threshold: 0.850.
+individual_inhibition,float,high,Probability from sub-model trained on ChEMBL assay CHEMBL4296188 (inhibition %; cutoff 25%; n=21494). Recommended threshold: 0.850.
 merged_mic_decoys,float,high,Probability from sub-model trained on MIC measurements merged across 7 ChEMBL assays (cutoff 20 uM; n=1510 incl. decoys). Recommended threshold: 0.819.
 general_mic,float,high,Probability from sub-model trained on MIC measurements aggregated across 2075 ChEMBL assays (cutoff 10 uM; n=7763). Recommended threshold: 0.659.
 general_activity_decoys,float,high,Probability from sub-model trained on single-point % activity across 86 ChEMBL assays (cutoff 50%; n=580 incl. decoys). Recommended threshold: 0.839.
