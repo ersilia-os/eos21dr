@@ -28,12 +28,12 @@ This model was incorporated on 2026-05-15.Last packaged on 2026-05-17.
 Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
 |------|------|-----------|-------------|
-| consensus_score | float | high | Tanh-transformed quality-weighted consensus probability across the 5 sub-models. |
-| individual_inhibition | float | high | Probability from sub-model trained on ChEMBL assay CHEMBL4296188 (inhibition % |
-| merged_mic_decoys | float | high | Probability from sub-model trained on MIC measurements merged across 7 ChEMBL assays (cutoff 20 uM; n=1510 incl. decoys). |
-| general_mic | float | high | Probability from sub-model trained on MIC measurements aggregated across 2075 ChEMBL assays (cutoff 10 uM; n=7763). |
-| general_activity_decoys | float | high | Probability from sub-model trained on single-point % activity across 86 ChEMBL assays (cutoff 50%; n=580 incl. decoys). |
-| general_mic50 | float | high | Probability from sub-model trained on MIC50 measurements across 63 ChEMBL assays (cutoff 10 uM; n=127). |
+| consensus_score | float | high | Tanh-transformed quality-weighted consensus probability across the 5 sub-models. Recommended threshold: 0.864. |
+| individual_inhibition | float | high | Probability from sub-model trained on ChEMBL assay CHEMBL4296188 (inhibition %; cutoff 25%; n=21494). Recommended threshold: 0.850. |
+| merged_mic_decoys | float | high | Probability from sub-model trained on MIC measurements merged across 7 ChEMBL assays (cutoff 20 uM; n=1510 incl. decoys). Recommended threshold: 0.819. |
+| general_mic | float | high | Probability from sub-model trained on MIC measurements aggregated across 2075 ChEMBL assays (cutoff 10 uM; n=7763). Recommended threshold: 0.659. |
+| general_activity_decoys | float | high | Probability from sub-model trained on single-point % activity across 86 ChEMBL assays (cutoff 50%; n=580 incl. decoys). Recommended threshold: 0.839. |
+| general_mic50 | float | high | Probability from sub-model trained on MIC50 measurements across 63 ChEMBL assays (cutoff 10 uM; n=127). Recommended threshold: 0.543. |
 
 
 ### Source and Deployment
