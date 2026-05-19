@@ -26,12 +26,13 @@ Output Consistency: Fixed
 Interpretation: Probability of antimicrobial activity against A. baumannii from 
   five ChEMBL-trained sub-models, plus a quality-weighted consensus score.
 Tag:
-  - A.baumannii
+  - Gram-negative bacteria
   - ESKAPE
   - Antimicrobial activity
   - ChEMBL
 Biomedical Area:
   - Antimicrobial resistance
+  - Pneumonia
 Target Organism:
   - Acinetobacter baumannii
 Publication Type: Other
