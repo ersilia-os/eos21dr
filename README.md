@@ -12,9 +12,9 @@ This model was incorporated on 2026-05-15.Last packaged on 2026-05-19.
 ### Domain
 - **Task:** `Annotation`
 - **Subtask:** `Activity prediction`
-- **Biomedical Area:** `Antimicrobial resistance`
+- **Biomedical Area:** `Antimicrobial resistance`, `Pneumonia`
 - **Target Organism:** `Acinetobacter baumannii`
-- **Tags:** `A.baumannii`, `ESKAPE`, `Antimicrobial activity`, `ChEMBL`
+- **Tags:** `Gram-negative bacteria`, `ESKAPE`, `Antimicrobial activity`, `ChEMBL`
 
 ### Input
 - **Input:** `Compound`
