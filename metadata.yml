@@ -49,7 +49,7 @@ DockerHub: https://hub.docker.com/r/ersiliaos/eos21dr
 Docker Architecture:
   - AMD64
   - ARM64
-Model Size: 96.0
+Model Size: 161.0
 Environment Size: 1888.0
 Image Size: 2136.31
 Computational Performance 1: 42.78
