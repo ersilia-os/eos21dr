@@ -16,7 +16,7 @@
     "max_bin": 256,
     "n_estimators": 2000,
     "early_stopping_rounds": 50,
-    "nthread": 56,
+    "nthread": 16,
     "objective": "binary:logistic",
     "scale_pos_weight": 62.3509,
     "max_delta_step": 1,

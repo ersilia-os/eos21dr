@@ -17,7 +17,7 @@
     "reg_alpha": 0.0,
     "reg_lambda": 0.85,
     "max_bin": 256,
-    "nthread": 56,
+    "nthread": 16,
     "objective": "binary:logistic",
     "scale_pos_weight": 62.345,
     "max_delta_step": 1,
@@ -45,13 +45,13 @@
   },
   "decision_cutoff_raw": 0.1730836182832718,
   "decision_cutoff_raw_source": "oof_balanced_accuracy",
-  "decision_cutoff_proba": 0.009968490681132133,
+  "decision_cutoff_proba": 0.009968490681132161,
   "decision_cutoff_rank": 0.837983798379838,
-  "decision_cutoff_logit": -4.598307583748163,
+  "decision_cutoff_logit": -4.59830758374816,
   "calibrator": {
     "method": "platt",
-    "coef": 5.944894920399308,
-    "intercept": -5.627271506884718
+    "coef": 5.944894920399304,
+    "intercept": -5.627271506884715
   },
   "ranker": {
     "knots": [

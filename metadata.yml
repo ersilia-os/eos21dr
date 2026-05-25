@@ -21,7 +21,7 @@ Input:
 Input Dimension: 1
 Output:
   - Score
-Output Dimension: 6
+Output Dimension: 8
 Output Consistency: Fixed
 Interpretation: Probability of antimicrobial activity against A. baumannii from 
   five ChEMBL-trained sub-models, plus a quality-weighted consensus score.
