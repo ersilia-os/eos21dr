@@ -1,6 +1,6 @@
 This model has been financed by Project PID2023-148309OA-I00 funded by MICIU/AEI/10.13039/501100011033 and by ERDF, EU.
 
-<img width="300" alt="miciu_cofinanciado" src="https://github.com/ersilia-os/ersilia/assets/miciu_cofinanciado.jpg" />
+<img width="300" alt="miciu_cofinanciado" src="https://raw.githubusercontent.com/ersilia-os/ersilia/master/assets/miciu_cofinanciado.jpg" />
 
 # Antimicrobial activity prediction against Acinetobacter baumannii from public ChEMBL data
 
