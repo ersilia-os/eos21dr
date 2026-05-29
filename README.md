@@ -1,3 +1,7 @@
+This model has been financed by Project PID2023-148309OA-I00 funded by MICIU/AEI/10.13039/501100011033 and by ERDF, EU.
+
+<img width="300" alt="miciu_cofinanciado" src="https://github.com/ersilia-os/ersilia/assets/miciu_cofinanciado.jpg" />
+
 # Antimicrobial activity prediction against Acinetobacter baumannii from public ChEMBL data
 
 Bioactivity prediction of growth inhibition in Acinetobacter baumannii, trained as binary (active/inactive) classifiers from publicly available data in ChEMBL. Independent models are trained on multiple bioactivity datasets, corresponding to single point (e.g. percent effect) and dose-response (MIC) assays. A ranking score is provided for each model alongside a combined consensus score.
