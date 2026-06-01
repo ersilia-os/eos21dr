@@ -11,7 +11,6 @@ Description: Bioactivity prediction of growth inhibition in Acinetobacter
   alongside a combined consensus score.
 Deployment:
   - Local
-  - Online
 Source: Local
 Source Type: Internal
 Task: Annotation
@@ -23,8 +22,7 @@ Output:
   - Score
 Output Dimension: 8
 Output Consistency: Fixed
-Interpretation: Probability of antimicrobial activity against A. baumannii from 
-  five ChEMBL-trained sub-models, plus a quality-weighted consensus score.
+Interpretation: Probability of antimicrobial activity against A. baumannii from 7 ChEMBL-trained sub-models, plus a quality-weighted consensus score.
 Tag:
   - Gram-negative bacteria
   - ESKAPE

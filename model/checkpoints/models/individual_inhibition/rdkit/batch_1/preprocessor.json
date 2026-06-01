@@ -3,7 +3,7 @@
   "scaler": "robust",
   "reducer": "variance_threshold",
   "n_features_in": 217,
-  "n_features_out": 207,
+  "n_features_out": 208,
   "kept_feature_indices": [
     0,
     1,
@@ -190,6 +190,7 @@
     189,
     190,
     191,
+    192,
     193,
     194,
     195,

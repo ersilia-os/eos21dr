@@ -16,7 +16,7 @@
     "max_bin": 256,
     "n_estimators": 2000,
     "early_stopping_rounds": 50,
-    "nthread": 16,
+    "nthread": 56,
     "objective": "binary:logistic",
     "scale_pos_weight": 2.9386,
     "eval_metric": "auc"

@@ -15,7 +15,7 @@ import numpy as np
 import pandas as pd
 
 _W_COLS = ["w1", "w2", "w3", "w4", "w5", "w6", "w7"]
-_TANH_A, _TANH_TAU = 1.156, 6.47
+_TANH_A, _TANH_TAU = 1.2421278739876145, 10.621775439578736
 
 
 def compute_consensus(R, cols_ordered, model_names, checkpoints_dir):
@@ -37,6 +37,11 @@ def compute_consensus(R, cols_ordered, model_names, checkpoints_dir):
     prob_ranks = np.nan_to_num(
         R[:, [name_to_idx[m] for m in model_names]], nan=0.0
     )
+
+    # Single sub-model: the consensus would just be a tanh-rescaled copy of
+    # the sole prob_rank. Skip it and emit only the sub-model column.
+    if len(model_names) == 1:
+        return np.round(prob_ranks, 4), list(model_names)
 
     reports = pd.read_csv(os.path.join(checkpoints_dir, "reports.csv")).set_index("model_name")
     w_quality = np.array([reports.loc[m, _W_COLS].values for m in model_names], dtype=float)

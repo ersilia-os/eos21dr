@@ -3,7 +3,7 @@
   "scaler": "max_abs",
   "reducer": "correlation_filter",
   "n_features_in": 2048,
-  "n_features_out": 2047,
+  "n_features_out": 2046,
   "kept_feature_indices": [
     0,
     1,
@@ -1093,7 +1093,6 @@
     1085,
     1086,
     1087,
-    1088,
     1089,
     1090,
     1091,

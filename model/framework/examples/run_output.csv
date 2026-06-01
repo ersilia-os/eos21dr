@@ -1,4 +1,4 @@
-consensus_score,general_single_point,general_dose_response,general_mic,general_activity_decoys,general_mic50,individual_inhibition,merged_mic_decoys
-0.9217,0.9506,0.8948,0.8948,0.7005,0.4463,0.8996,0.6305
-0.9583,0.9551,0.962,0.9709,0.7955,0.6046,0.9274,0.6958
-0.9181,0.9197,0.8616,0.8483,0.5808,0.5101,0.9354,0.7057
+consensus_score,individual_inhibition,merged_mic_decoys,general_single_point,general_dose_response,general_mic,general_activity_decoys,general_mic50
+0.9006,0.9295,0.613,0.9493,0.8949,0.8974,0.5143,0.4458
+0.9479,0.9297,0.7404,0.9524,0.9654,0.9748,0.6642,0.6044
+0.8949,0.9413,0.6417,0.9164,0.8619,0.8543,0.4995,0.5072

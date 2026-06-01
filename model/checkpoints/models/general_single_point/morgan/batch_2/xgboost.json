@@ -16,7 +16,7 @@
     "max_bin": 256,
     "n_estimators": 2000,
     "early_stopping_rounds": 50,
-    "nthread": 16,
+    "nthread": 56,
     "objective": "binary:logistic",
     "scale_pos_weight": 86.4778,
     "max_delta_step": 1,
@@ -49,7 +49,7 @@
   "decision_cutoff_logit": -5.357524388394348,
   "calibrator": {
     "method": "platt",
-    "coef": 6.812866967609801,
+    "coef": 6.812866967609802,
     "intercept": -5.3741629019679955
   },
   "ranker": {
