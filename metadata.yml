@@ -47,7 +47,7 @@ S3: https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos21dr.zip
 DockerHub: https://hub.docker.com/r/ersiliaos/eos21dr
 Docker Architecture: AMD64
 Model Size: 179.0
-Environment Size: 1889.0
+Environment Size: 1890.0
 Image Size: 2230.37
 Computational Performance 1: 47.93
 Computational Performance 2: 35.34
