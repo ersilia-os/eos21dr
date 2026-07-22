@@ -29,15 +29,15 @@ Below are the **Output Columns** of the model:
 | Name | Type | Direction | Description |
 |------|------|-----------|-------------|
 | consensus_score | float | high | Tanh-transformed quality-weighted consensus probability across the 9 sub-models. Recommended threshold: 0.846. |
-| sp_catchall | float | high | Probability from sub-model trained on ChEMBL single-point low-data catch-all pool of 41 assays (432 compounds; predominantly Inhibition). Recommended threshold: 0.791. |
-| dr_0001 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 182 assays (1937 compounds; predominantly MIC). Recommended threshold: 0.785. |
-| dr_0002 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 126 assays (1236 compounds; predominantly MIC). Recommended threshold: 0.822. |
-| dr_0000 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 97 assays (1010 compounds; predominantly MIC). Recommended threshold: 0.608. |
-| dr_0003 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 73 assays (657 compounds; predominantly MIC). Recommended threshold: 0.616. |
-| dr_0004 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 36 assays (503 compounds; predominantly MIC). Recommended threshold: 0.691. |
-| dr_0005 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 35 assays (388 compounds; predominantly MIC). Recommended threshold: 0.565. |
-| dr_0006 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 45 assays (233 compounds; predominantly MIC). Recommended threshold: 0.749. |
-| dr_0007 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 3 assays (101 compounds; predominantly MIC). Recommended threshold: 0.723. |
+| chembl_single_point_0 | float | high | Probability from sub-model trained on ChEMBL single-point low-data catch-all pool of 41 assays (432 compounds). Recommended threshold: 0.791. |
+| chembl_dose_response_0 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 182 assays (1937 compounds). Recommended threshold: 0.785. |
+| chembl_dose_response_1 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 126 assays (1236 compounds). Recommended threshold: 0.822. |
+| chembl_dose_response_2 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 97 assays (1010 compounds). Recommended threshold: 0.608. |
+| chembl_dose_response_3 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 73 assays (657 compounds). Recommended threshold: 0.616. |
+| chembl_dose_response_4 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 36 assays (503 compounds). Recommended threshold: 0.691. |
+| chembl_dose_response_5 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 35 assays (388 compounds). Recommended threshold: 0.565. |
+| chembl_dose_response_6 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 45 assays (233 compounds). Recommended threshold: 0.749. |
+| chembl_dose_response_7 | float | high | Probability from sub-model trained on ChEMBL dose-response signal-based pool of 3 assays (101 compounds). Recommended threshold: 0.723. |
 
 
 ### Source and Deployment
