@@ -3,12 +3,13 @@ Slug: antimicrobial-activity-abaumannii
 Status: Ready
 Title: Antimicrobial activity prediction against Acinetobacter baumannii from 
   public ChEMBL data
-Description: Bioactivity prediction of growth inhibition in Acinetobacter 
-  baumannii, trained as binary (active/inactive) classifiers from publicly 
-  available data in ChEMBL. Independent models are trained on multiple 
-  bioactivity datasets, corresponding to single-point (Inhibition) and 
-  dose-response (MIC) assays, among others. A ranking score is provided for each
-  model alongside a combined consensus score.
+Description: Ranks compounds by their likelihood of inhibiting Acinetobacter baumannii
+  growth, drawing on bioactivity records deposited in ChEMBL. Separate binary classifiers
+  were trained over each usable assay pool, keeping single-point percentage-inhibition
+  measurements apart from dose-response MIC determinations since the two express activity
+  on different terms. Every classifier contributes its own ranked probability, and
+  these are folded into a quality-weighted consensus that gives more influence to
+  models built on larger, better-populated pools.
 Deployment:
   - Local
 Source: Local
@@ -22,9 +23,8 @@ Output:
   - Score
 Output Dimension: 10
 Output Consistency: Fixed
-Interpretation: Probability of antimicrobial activity against Acinetobacter 
-  baumannii from 9 ChEMBL-trained sub-models, plus a quality-weighted consensus 
-  score.
+Interpretation: Probability of Acinetobacter baumannii growth inhibition across ChEMBL-trained
+  sub-models, plus a quality-weighted consensus.
 Tag:
   - Gram-negative bacteria
   - ESKAPE
