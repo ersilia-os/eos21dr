@@ -28,7 +28,7 @@
     "sparsity": 0.9467819048220146,
     "is_sparse_counts": false,
     "binary_feature_fraction": 0.7536764705882353,
-    "feature_signal_strength": 0.10960805487345586,
+    "feature_signal_strength": 0.10960805495010006,
     "feature_signal_p90": 0.1862105389743369,
     "task": "classification",
     "imbalance_ratio": 3.314814814814815,
@@ -44,7 +44,7 @@
   "decision_cutoff_raw": 0.111131951212883,
   "decision_cutoff_raw_source": "oof_balanced_accuracy",
   "decision_cutoff_proba": 0.101439269209775,
-  "decision_cutoff_rank": 0.7241379310344828,
+  "decision_cutoff_rank": 0.723175965665236,
   "decision_cutoff_logit": -2.1813340087467568,
   "calibrator": {
     "method": "platt",
