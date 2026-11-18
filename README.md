@@ -2,7 +2,8 @@
 
 Bioactivity prediction of growth inhibition in Acinetobacter baumannii, trained as binary (active/inactive) classifiers from publicly available data in ChEMBL. Independent models are trained on multiple bioactivity datasets, corresponding to single-point (Inhibition) and dose-response (MIC) assays, among others. A ranking score is provided for each model alongside a combined consensus score.
 
-This model was incorporated on 2026-05-15.Last packaged on 2026-10-05.
+This model was incorporated on 2026-05-15.
+Last packaged on 2026-10-05.
 
 ## Information
 ### Identifiers
