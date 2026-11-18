@@ -49,7 +49,7 @@ DockerHub: https://hub.docker.com/r/ersiliaos/eos21dr
 Docker Architecture:
   - AMD64
   - ARM64
-Apptainer: https://models-sif.s3.eu-north-1.amazonaws.com/eos21dr_v5.sif
+Apptainer: https://models-sif.s3.eu-north-1.amazonaws.com/eos21dr_v6.sif
 Model Size: 179.0
 Environment Size: 7923.0
 Image Size: 3931.08
