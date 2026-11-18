@@ -47,6 +47,7 @@ Below are the **Output Columns** of the model:
 - **DockerHub**: [https://hub.docker.com/r/ersiliaos/eos21dr](https://hub.docker.com/r/ersiliaos/eos21dr)
 - **Docker Architecture:** `AMD64`, `ARM64`
 - **S3 Storage**: [https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos21dr.zip](https://ersilia-models-zipped.s3.eu-central-1.amazonaws.com/eos21dr.zip)
+- **Apptainer**: [https://models-sif.s3.eu-north-1.amazonaws.com/eos21dr_v5.sif](https://models-sif.s3.eu-north-1.amazonaws.com/eos21dr_v5.sif)
 
 ### Resource Consumption
 - **Model Size (Mb):** `179`
