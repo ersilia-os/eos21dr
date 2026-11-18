@@ -5,6 +5,7 @@
   "n_features_in": 768,
   "n_features_out": 767,
   "kept_feature_indices": [
+    0,
     1,
     2,
     3,
@@ -478,7 +479,6 @@
     471,
     472,
     473,
-    474,
     475,
     476,
     477,

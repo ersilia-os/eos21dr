@@ -3,7 +3,7 @@
   "scaler": "standard",
   "reducer": "correlation_filter",
   "n_features_in": 768,
-  "n_features_out": 765,
+  "n_features_out": 766,
   "kept_feature_indices": [
     0,
     1,
@@ -316,6 +316,7 @@
     309,
     310,
     311,
+    312,
     313,
     314,
     315,
